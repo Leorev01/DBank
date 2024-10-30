@@ -6,10 +6,14 @@ actor DBank {
 
   let id = 2343453453565654;
 
-  func topUp() {
-    currentValue +=1;
+  public func topUp(amount: Nat) {
+    currentValue += amount;
     Debug.print(debug_show(currentValue));
   };
 
-  //topUp();
+  public func withdraw(amount: Nat) {
+    currentValue -= amount;
+    Debug.print(debug_show(currentValue));
+  };
+  
 }
